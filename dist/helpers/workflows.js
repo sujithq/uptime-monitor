@@ -130,7 +130,7 @@ jobs:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT || github.token }}
       - name: Update template
-        uses: upptime/uptime-monitor@${await (0, exports.getUptimeMonitorVersion)()}
+        uses: sujithq/uptime-monitor@master
         with:
           command: "update-template"
         env:
@@ -266,7 +266,7 @@ jobs:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT || github.token }}
       - name: Update template
-        uses: upptime/uptime-monitor@master
+        uses: sujithq/uptime-monitor@master
         with:
           command: "update-template"
         env:
