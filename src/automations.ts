@@ -23,7 +23,7 @@ const createAutomatedIssue = async () => {
       page,
     });
     for await (const repository of results.data.items) {
-      const owner = repository.owner.login;
+      const owner = repository?.owner?.login || "";
       const repo = repository.name;
       if (`${owner}/${repo}` !== "wakatime/statuspage") {
         let hasDisabledAutomatedIssues = false;
